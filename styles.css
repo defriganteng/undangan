@@ -79,7 +79,8 @@ body {
 /* Isi Undangan */
 .content {
     padding: 50px;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.3); /* Mengubah background menjadi transparan */
+    backdrop-filter: blur(5px); /* Menambahkan efek blur */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -111,24 +112,24 @@ body {
     color: #16404D;
 }
 
-/* Ikon Panah ke Atas */
-.scroll-up {
+/* Indikator Scroll (Tanpa Fungsi Klik) */
+.scroll-indicator {
     margin-top: 50px;
     text-align: center;
     font-size: 1.2em;
     color: #A6CDC6;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    animation: bounce 1.5s infinite;
 }
 
-.scroll-up span {
+.scroll-indicator span {
     font-size: 2em;
     display: block;
 }
 
-.scroll-up:hover {
-    transform: scale(1.1);
-    color: #16404D;
+/* Animasi Indikator */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
 /* Efek Smooth Scroll */
