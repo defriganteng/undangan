@@ -1,19 +1,11 @@
-document.getElementById("openInvitation").addEventListener("click", function() {
-    document.body.style.overflow = "auto"; // Mengaktifkan scroll setelah tombol ditekan
-    document.getElementById("invitationContent").scrollIntoView({ behavior: "smooth" });
+// Event klik tombol "Buka Undangan"
+document.getElementById("openInvitation").addEventListener("click", function () {
+    document.body.style.overflow = "auto"; // Mengaktifkan scroll
     document.getElementById("content").style.opacity = "1"; // Menampilkan isi undangan
-    document.getElementById("bgMusic").play(); // Memutar lagu
+    document.getElementById("bgMusic").play(); // Memutar musik
 });
 
-// Mengambil nama tamu dari URL
-function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-}
-
-// Menampilkan nama tamu jika tersedia
-const guestName = getQueryParam("nama");
-if (guestName) {
-    document.getElementById("guestName").textContent = guestName;
-}
-
+// Event klik panah ke atas
+document.querySelector(".scroll-up").addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
