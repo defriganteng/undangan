@@ -75,10 +75,10 @@ body {
 
 .guest-title {
     font-family: 'Arial', sans-serif; /* Font sederhana */
-    font-size: 20px;
+    font-size: 10px;
     font-weight: normal;
     color: #ffffff; /* Warna putih */
-    margin-bottom: 5px; /* Jarak lebih dekat dengan Nama Tamu */
+    margin-bottom: 1px; /* Jarak lebih dekat dengan Nama Tamu */
 }
 
 .guest-name {
