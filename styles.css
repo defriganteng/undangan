@@ -1,85 +1,74 @@
-/* Font & Reset */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap');
-
-body {
-    font-family: 'Playfair Display', serif;
+/* Reset dasar */
+* {
     margin: 0;
     padding: 0;
-    background: url('background1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
+    box-sizing: border-box;
+}
+
+/* Mengunci background agar tetap statis */
+body {
+    font-family: 'Playfair Display', serif;
     text-align: center;
+    background: url('background1.jpg') no-repeat center center/cover;
+    background-attachment: fixed; /* Membuat background tetap diam */
     overflow: hidden; /* Mengunci scroll sebelum tombol ditekan */
 }
 
 /* Sampul Undangan */
 .cover {
+    position: relative;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: white;
     background: url('sampul.jpg') no-repeat center center/cover;
-    color: #fff;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-    padding-top: 40px;
 }
 
-/* Teks di Sampul */
-.wedding-title {
-    font-size: 1.8em;
+/* Judul di Sampul */
+.cover-title {
+    font-size: 36px;
     font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-.couple-names {
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'Great Vibes', cursive;
+/* Nama Mempelai */
+.bride-groom {
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
 /* Nama Tamu */
 .guest-name {
-    font-size: 1.4em;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Tombol Buka Undangan */
+.open-invitation {
     margin-top: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 12px 25px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-#guestName {
-    font-size: 1.6em;
-    font-weight: bold;
-    margin-top: 5px;
-    color: #FFD700;
-}
-
-/* Tombol "Buka Undangan" */
-.cover button {
-    background: linear-gradient(135deg, #DDA853, #B8863B);
+    padding: 12px 24px;
+    font-size: 18px;
     color: white;
+    background: #DDA853;
     border: none;
-    padding: 15px 40px;
-    font-size: 1.3em;
+    border-radius: 5px;
     cursor: pointer;
-    border-radius: 30px;
-    transition: all 0.3s ease-in-out;
-    font-weight: bold;
-    margin-top: 50px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease-in-out;
 }
 
-.cover button:hover {
-    background: linear-gradient(135deg, #B8863B, #8B6508);
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+.open-invitation:hover {
+    background: #b88e44;
 }
 
 /* Isi Undangan */
 .content {
     padding: 50px;
-    background: rgba(255, 255, 255, 0.01); /* Mengubah background menjadi transparan */
+    background: rgba(255, 255, 255, 0.01); /* Transparan tanpa blur */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -89,49 +78,75 @@ body {
     transition: opacity 1s ease-in-out;
 }
 
-/* Teks di Isi Undangan */
-.content .wedding-title {
-    font-size: 1.8em;
+/* Judul di Isi Undangan */
+.content-title {
+    font-size: 36px;
     font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
-    color: #16404D;
+    margin-bottom: 10px;
 }
 
-.content .couple-names {
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'Great Vibes', cursive;
-    color: #DDA853;
+/* Tanggal Pernikahan */
+.wedding-date {
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 20px;
 }
 
-.content .wedding-date {
-    font-size: 1.5em;
-    margin-top: 10px;
-    color: #16404D;
-}
-
-/* Indikator Scroll (Tanpa Fungsi Klik) */
-.scroll-indicator {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #A6CDC6;
+/* Ikon Panah ke Atas */
+.scroll-icon {
+    font-size: 24px;
+    margin-top: 30px;
     animation: bounce 1.5s infinite;
 }
 
-.scroll-indicator span {
-    font-size: 2em;
-    display: block;
-}
-
-/* Animasi Indikator */
+/* Animasi Ikon Panah */
 @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
-/* Efek Smooth Scroll */
-html {
-    scroll-behavior: smooth;
+/* Responsivitas untuk Mobile */
+@media screen and (max-width: 768px) {
+    .cover-title {
+        font-size: 24px; /* Ukuran teks lebih kecil di mobile */
+    }
+    .bride-groom {
+        font-size: 22px;
+    }
+    .guest-name {
+        font-size: 20px;
+    }
+    .open-invitation {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    .content-title {
+        font-size: 28px;
+    }
+    .wedding-date {
+        font-size: 22px;
+    }
+}
+
+/* Responsivitas untuk Desktop */
+@media screen and (min-width: 1024px) {
+    .cover-title {
+        font-size: 36px;
+    }
+    .bride-groom {
+        font-size: 28px;
+    }
+    .guest-name {
+        font-size: 24px;
+    }
+    .open-invitation {
+        padding: 15px 25px;
+        font-size: 18px;
+    }
+    .content-title {
+        font-size: 36px;
+    }
+    .wedding-date {
+        font-size: 28px;
+    }
 }
