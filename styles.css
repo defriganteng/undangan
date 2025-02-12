@@ -125,20 +125,20 @@ margin-top: -20px;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;
-    color: #16404D;
+    color: #fff;
 }
 
 .content .couple-names {
     font-size: 3em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-    color: #DDA853;
+    color: #fff;
 }
 
 .content .wedding-date {
     font-size: 1.5em;
     margin-top: 10px;
-    color: #16404D;
+    color: #fff;
 }
 
 /* Indikator Scroll (Tanpa Fungsi Klik) */
