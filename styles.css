@@ -1,6 +1,6 @@
 /* Mengatur tampilan halaman */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
     background: url('background1.jpg') no-repeat center center/cover;
@@ -17,34 +17,39 @@ body {
     justify-content: center;
     align-items: center;
     background: url('sampul.jpg') no-repeat center center/cover;
-    color: #16404D;
+    color: #fff;
     position: relative;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Efek bayangan agar lebih terbaca */
     padding-top: 40px; /* Geser semua konten ke atas */
 }
 
 /* "The Wedding of" */
 .wedding-title {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
     margin-bottom: 5px;
-    margin-top: -30px; /* Geser ke atas */
+    margin-top: -30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
 /* Nama mempelai */
 .couple-names {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
-    margin: 0;
+    margin: 10px 0;
+    font-family: 'Great Vibes', cursive;
 }
 
 /* "Kepada Yth" */
 .guest-name {
-    font-size: 1.2em;
-    margin-top: 30px; /* Jarak setelah nama mempelai */
-    background: rgba(255, 255, 255, 0.7);
-    padding: 10px 20px;
-    border-radius: 10px;
+    font-size: 1.4em;
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Efek blur transparan */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,32 +57,38 @@ body {
 
 /* Nama tamu berada di bawah "Kepada Yth" */
 #guestName {
-    font-size: 1.4em;
+    font-size: 1.6em;
     font-weight: bold;
     margin-top: 5px;
+    color: #FFD700; /* Warna emas */
 }
 
-/* Tombol "Buka Undangan" digeser ke bawah */
+/* Tombol "Buka Undangan" lebih elegan */
 .cover button {
-    background-color: #DDA853;
+    background: linear-gradient(135deg, #DDA853, #B8863B);
     color: white;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
+    padding: 15px 40px;
+    font-size: 1.3em;
     cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    letter-spacing: 1px;
     margin-top: 50px; /* Geser tombol lebih ke bawah */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .cover button:hover {
-    background-color: #b8863b;
+    background: linear-gradient(135deg, #B8863B, #8B6508);
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* Isi Undangan */
 .content {
     padding: 50px;
-    background: rgba(255, 255, 255, 0.9); /* Transparan agar menyatu dengan background */
+    background: rgba(255, 255, 255, 0.9);
     min-height: 100vh;
     border-radius: 10px;
     margin: 20px;
