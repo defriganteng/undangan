@@ -67,23 +67,27 @@ body {
     font-family: 'Great Vibes', cursive;
 }
 
-/* Nama Tamu */
+/* Gaya untuk Kepada Yth dan Nama Tamu */
+.guest-container {
+    text-align: center;
+    margin-top: 20px; /* Sesuaikan jarak dengan elemen lainnya */
+}
+
+.guest-title {
+    font-family: 'Arial', sans-serif; /* Font sederhana */
+    font-size: 20px;
+    font-weight: normal;
+    color: #ffffff; /* Warna putih */
+    margin-bottom: 5px; /* Jarak lebih dekat dengan Nama Tamu */
+}
+
 .guest-name {
-    font-size: 1.4em;
-    margin-top: 30px;
-    background: rgba(255, 255, 255, 0.2);
-    padding: 12px 25px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-}
-
-#guestName {
-    font-size: 1.6em;
+    font-family: 'Arial', sans-serif; /* Samakan font dengan Kepada Yth */
+    font-size: 22px;
     font-weight: bold;
-    margin-top: 5px;
-    color: #FFD700;
+    color: #ffffff; /* Warna putih */
+    margin-top: 0; /* Mengurangi jarak agar lebih dekat */
 }
-
 /* Tombol "Buka Undangan" */
 .cover button {
     background: linear-gradient(135deg, #DDA853, #B8863B);
