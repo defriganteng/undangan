@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background1.jpg') no-repeat center center/cover; /* Background halaman */
+    background: url('background1.jpg') no-repeat center center/cover;
     background-attachment: fixed; /* Agar background tetap diam saat scroll */
     text-align: center;
     overflow: hidden; /* Mengunci scroll sebelum tombol ditekan */
@@ -16,36 +16,48 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('sampul.jpg') no-repeat center center/cover; /* Background sampul */
+    background: url('sampul.jpg') no-repeat center center/cover;
     color: #16404D;
     position: relative;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    padding-top: 40px; /* Geser semua konten ke atas */
 }
 
-/* Teks "The Wedding of" */
+/* "The Wedding of" */
 .wedding-title {
     font-size: 1.5em;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    margin-top: -30px; /* Geser ke atas */
 }
 
 /* Nama mempelai */
 .couple-names {
     font-size: 2.5em;
     font-weight: bold;
-    margin: 10px 0;
+    margin: 0;
 }
 
-/* Nama tamu */
+/* "Kepada Yth" */
 .guest-name {
     font-size: 1.2em;
-    margin-bottom: 20px;
-    background: rgba(255, 255, 255, 0.7); /* Transparan agar lebih terbaca */
+    margin-top: 30px; /* Jarak setelah nama mempelai */
+    background: rgba(255, 255, 255, 0.7);
     padding: 10px 20px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Tombol "Buka Undangan" */
+/* Nama tamu berada di bawah "Kepada Yth" */
+#guestName {
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* Tombol "Buka Undangan" digeser ke bawah */
 .cover button {
     background-color: #DDA853;
     color: white;
@@ -55,7 +67,9 @@ body {
     cursor: pointer;
     border-radius: 5px;
     transition: 0.3s;
+    margin-top: 50px; /* Geser tombol lebih ke bawah */
 }
+
 .cover button:hover {
     background-color: #b8863b;
 }
