@@ -1,6 +1,8 @@
 document.getElementById("openInvitation").addEventListener("click", function() {
     document.body.style.overflow = "auto"; // Mengaktifkan scroll setelah tombol ditekan
     document.getElementById("invitationContent").scrollIntoView({ behavior: "smooth" });
+    document.getElementById("content").style.opacity = "1"; // Menampilkan isi undangan
+    document.getElementById("bgMusic").play(); // Memutar lagu
 });
 
 // Mengambil nama tamu dari URL
@@ -15,8 +17,3 @@ if (guestName) {
     document.getElementById("guestName").textContent = guestName;
 }
 
-document.getElementById("openInvitation").addEventListener("click", function () {
-    document.body.style.overflow = "auto"; // Mengaktifkan scroll
-    document.getElementById("content").style.opacity = "1"; // Menampilkan isi undangan
-    document.getElementById("bgMusic").play(); // Memutar lagu
-});
