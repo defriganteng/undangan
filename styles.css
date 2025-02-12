@@ -11,6 +11,35 @@ body {
     overflow: hidden; /* Mengunci scroll sebelum tombol ditekan */
 }
 
+/* Responsivitas untuk Mobile */
+@media screen and (max-width: 768px) {
+    .cover-title {
+        font-size: 24px; /* Ukuran teks lebih kecil di mobile */
+    }
+    .guest-name {
+        font-size: 20px;
+    }
+    .open-invitation {
+        padding: 12px 20px; /* Tombol lebih besar untuk mudah ditekan */
+        font-size: 18px;
+    }
+}
+
+/* Responsivitas untuk Desktop */
+@media screen and (min-width: 1024px) {
+    .cover-title {
+        font-size: 36px;
+    }
+    .guest-name {
+        font-size: 28px;
+    }
+    .open-invitation {
+        padding: 15px 25px;
+        font-size: 20px;
+    }
+}
+
+
 /* Sampul Undangan */
 .cover {
     height: 100vh;
