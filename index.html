@@ -8,22 +8,33 @@
 </head>
 <body>
 
+    <!-- Musik Latar -->
+    <audio id="bgMusic" src="lagu-pernikahan.mp3"></audio>
+
     <!-- Sampul Undangan -->
     <div class="cover">
-        <p class="wedding-title">The Wedding of</p>
+        <h2 class="wedding-title">The Wedding of</h2>
         <h1 class="couple-names">Pria & Wanita</h1>
-        <p class="guest-name">Kepada Yth, <span id="guestName">Nama Tamu</span></p>
-        <audio id="bgMusic" src="lagu-pernikahan.mp3"></audio>
+        <div class="guest-name">
+            <p>Kepada Yth</p>
+            <p id="guestName">Nama Tamu</p>
+        </div>
         <button id="openInvitation">Buka Undangan</button>
     </div>
 
     <!-- Isi Undangan -->
-    <div class="content" id="invitationContent">
-        <h2>Selamat Datang</h2>
-        <p>Terima kasih telah hadir dalam momen bahagia kami.</p>
+    <div class="content" id="content">
+        <h2 class="wedding-title">The Wedding of</h2>
+        <h1 class="couple-names">Pria & Wanita</h1>
+        <p class="wedding-date">25 . 05 . 2025</p>
+        
+        <!-- Ikon panah ke atas -->
+        <div class="scroll-up">
+            <span>&#x2191;</span>
+            <p>Scroll ke atas</p>
+        </div>
     </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
