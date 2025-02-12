@@ -1,47 +1,39 @@
-/* Mengunci scroll saat halaman dimuat */
+/* Mengatur background untuk seluruh halaman */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #FBF5DD;
+    background: url('background1.jpg') no-repeat center center/cover; /* Gambar background halaman */
+    background-attachment: fixed; /* Agar background tetap di tempat saat scrolling */
     text-align: center;
-    overflow: hidden;
+    overflow: hidden; /* Mengunci scroll sebelum tombol ditekan */
 }
 
-/* Sampul Undangan */
+/* Sampul Undangan dengan Background Gambar */
 .cover {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    background: url('sampul.jpg') no-repeat center center/cover; /* Gambar untuk sampul */
+    color: #16404D;
     position: relative;
-    background: url('sampul.jpg') no-repeat center center;
-    background-size: cover;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efek bayangan teks agar lebih terbaca */
 }
-.cover h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-.cover button {
-    background-color: #DDA853;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-.cover button:hover {
-    background-color: #b8863b;
+
+/* Menambahkan efek transparan agar teks lebih terbaca */
+.cover h1, .cover p {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 /* Isi Undangan */
 .content {
     padding: 50px;
-    background-color: white;
+    background: rgba(255, 255, 255, 0.9); /* Background transparan untuk isi undangan */
     min-height: 100vh;
+    border-radius: 10px;
+    margin: 20px;
 }
