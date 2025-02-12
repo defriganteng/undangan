@@ -1,0 +1,47 @@
+/* Mengunci scroll saat halaman dimuat */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FBF5DD;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Sampul Undangan */
+..cover {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    position: relative;
+    background: url('sampul.jpg') no-repeat center center;
+    background-size: cover;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.cover h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.cover button {
+    background-color: #DDA853;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.cover button:hover {
+    background-color: #b8863b;
+}
+
+/* Isi Undangan */
+.content {
+    padding: 50px;
+    background-color: white;
+    min-height: 100vh;
+}
