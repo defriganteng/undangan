@@ -79,7 +79,7 @@ body {
 /* Isi Undangan */
 .content {
     padding: 50px;
-    background: rgba(255, 255, 255, 0.3); /* Mengubah background menjadi transparan */
+    background: rgba(255, 255, 255, 0.01); /* Mengubah background menjadi transparan */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
