@@ -1,39 +1,77 @@
-/* Mengatur background untuk seluruh halaman */
+/* Mengatur tampilan halaman */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background1.jpg') no-repeat center center/cover; /* Gambar background halaman */
-    background-attachment: fixed; /* Agar background tetap di tempat saat scrolling */
+    background: url('background1.jpg') no-repeat center center/cover; /* Background halaman */
+    background-attachment: fixed; /* Agar background tetap diam saat scroll */
     text-align: center;
     overflow: hidden; /* Mengunci scroll sebelum tombol ditekan */
 }
 
-/* Sampul Undangan dengan Background Gambar */
+/* Sampul Undangan */
 .cover {
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('sampul.jpg') no-repeat center center/cover; /* Gambar untuk sampul */
+    background: url('sampul.jpg') no-repeat center center/cover; /* Background sampul */
     color: #16404D;
     position: relative;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Efek bayangan teks agar lebih terbaca */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* Menambahkan efek transparan agar teks lebih terbaca */
-.cover h1, .cover p {
-    background: rgba(255, 255, 255, 0.7);
+/* Teks "The Wedding of" */
+.wedding-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Nama mempelai */
+.couple-names {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Nama tamu */
+.guest-name {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.7); /* Transparan agar lebih terbaca */
     padding: 10px 20px;
     border-radius: 10px;
+}
+
+/* Tombol "Buka Undangan" */
+.cover button {
+    background-color: #DDA853;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.cover button:hover {
+    background-color: #b8863b;
 }
 
 /* Isi Undangan */
 .content {
     padding: 50px;
-    background: rgba(255, 255, 255, 0.9); /* Background transparan untuk isi undangan */
+    background: rgba(255, 255, 255, 0.9); /* Transparan agar menyatu dengan background */
     min-height: 100vh;
     border-radius: 10px;
     margin: 20px;
+    opacity: 0; /* Sembunyikan isi undangan sebelum tombol ditekan */
+    transition: opacity 1s ease-in-out;
+}
+
+/* Efek smooth scroll */
+html {
+    scroll-behavior: smooth;
 }
