@@ -101,7 +101,7 @@ body {
 /* Isi Undangan */
 .content {
     padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.1); /* Lebih terlihat dibanding sebelumnya */
+    background: rgba(255, 255, 255, 0.01); /* Lebih terlihat dibanding sebelumnya */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
