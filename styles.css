@@ -10,6 +10,9 @@ body {
     text-align: center;
     overflow: hidden;
     color: #fff;
+
+    background-size: cover;
+    z-index: -1;
 }
 
 /* Struktur Sampul Undangan */
