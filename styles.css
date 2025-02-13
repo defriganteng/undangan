@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url('sampul.jpg') no-repeat center center;
+    background: url('sampul.jpg') no-repeat center center/cover;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     position: relative;
