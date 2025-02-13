@@ -3,9 +3,13 @@ document.getElementById("openInvitation").addEventListener("click", function () 
     let content = document.getElementById("content");
     
     content.style.display = "flex"; // Pastikan elemen tampil dulu
+
+    // Force reflow agar animasi dikenali
+    void content.offsetWidth;
+
     setTimeout(() => {
         content.classList.add("show"); // Tambahkan kelas animasi setelah sedikit delay
-    }, 100); // Delay 100ms untuk memastikan browser mengenali perubahan
+    }, 50); // Delay kecil agar browser mengenali perubahan
     
     document.getElementById("bgMusic").play(); // Memutar musik
 
