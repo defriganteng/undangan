@@ -57,11 +57,93 @@ body {
 
 /* Khusus untuk menggeser tulisan di halaman isi */
 .content .wedding-title {
-    margin-top: -200px;  /* Menggeser "The Wedding of" lebih ke atas */
+    margin-top: -200px;
 }
 
 .content .couple-names {
-    margin-top: 20px;  /* Memberikan jarak antara judul dan nama */
+    margin-top: 20px;
+}
+
+/* Scroll Indicator Styling */
+.scroll-indicator {
+    position: fixed;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 1000;
+}
+
+.scroll-indicator span {
+    display: inline-block;
+    font-size: 2em;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: floatArrow 2s ease-in-out infinite, glowArrow 2s ease-in-out infinite;
+}
+
+.scroll-indicator::before {
+    content: "❋";
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+    opacity: 0.8;
+    animation: rotateFlower 4s linear infinite;
+}
+
+.scroll-indicator::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
+    margin: 10px auto 0;
+    animation: growLine 2s ease-in-out infinite;
+}
+
+/* Animasi untuk scroll indicator */
+@keyframes floatArrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes glowArrow {
+    0%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        opacity: 0.5;
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+}
+
+@keyframes growLine {
+    0% {
+        height: 0;
+        opacity: 0;
+    }
+    50% {
+        height: 40px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes rotateFlower {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* Animasi scale-up */
@@ -85,91 +167,11 @@ body {
 .content h2,
 .content h1,
 .content p,
-/* Scroll Indicator Styling */
 .scroll-indicator {
-    position: fixed;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    z-index: 1000;
-}
-
-.scroll-indicator span {
-    display: inline-block;
-    font-size: 2em;
-    color: #fff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    animation: floatArrow 2s ease-in-out infinite, glowArrow 2s ease-in-out infinite;
-    position: relative;
-}
-
-/* Mengganti ikon panah dengan desain yang lebih menarik */
-.scroll-indicator::before {
-    content: "❋";
-    font-size: 1.2em;
-    display: block;
-    margin-bottom: 5px;
-    opacity: 0.8;
-    animation: rotateFlower 4s linear infinite;
-}
-
-.scroll-indicator::after {
-    content: "";
-    display: block;
-    width: 2px;
-    height: 40px;
-    background: linear-gradient(to bottom, rgba(255,255,255,0.8), transparent);
-    margin: 10px auto 0;
-    animation: growLine 2s ease-in-out infinite;
-}
-
-/* Animasi mengambang untuk panah */
-@keyframes floatArrow {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-}
-
-/* Animasi cahaya untuk panah */
-@keyframes glowArrow {
-    0%, 100% {
-        opacity: 1;
-        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-    }
-    50% {
-        opacity: 0.5;
-        text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-    }
-}
-
-/* Animasi garis */
-@keyframes growLine {
-    0% {
-        height: 0;
-        opacity: 0;
-    }
-    50% {
-        height: 40px;
-        opacity: 1;
-    }
-    100% {
-        height: 0;
-        opacity: 0;
-    }
-}
-
-/* Animasi bunga */
-@keyframes rotateFlower {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    opacity: 0;
+    transform: scale(0.01);
+    transform-origin: center bottom;
+    animation-fill-mode: forwards;
 }
 
 /* Animasi saat elemen muncul */
