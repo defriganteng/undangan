@@ -231,14 +231,17 @@ html {
 }
 
 
-/* Animasi fade-in dengan efek scale-up */
-@keyframes scaleUp {
-    from {
+/* Animasi fade-in dengan efek scale-up dan bounce halus */
+@keyframes scaleUpBounce {
+    0% {
         opacity: 0;
-        transform: scale(0.8);
+        transform: scale(0.5);
     }
-    to {
+    60% {
         opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
         transform: scale(1);
     }
 }
@@ -249,22 +252,22 @@ html {
 .guest-title,
 .cover button {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.5);
 }
 
 /* Jalankan animasi saat halaman dimuat */
 .cover.show h2 {
-    animation: scaleUp 0.8s ease-out forwards;
+    animation: scaleUpBounce 0.8s ease-out forwards;
 }
 
 .cover.show h1 {
-    animation: scaleUp 1s ease-out forwards;
+    animation: scaleUpBounce 1s ease-out forwards;
 }
 
 .cover.show .guest-title {
-    animation: scaleUp 1.2s ease-out forwards;
+    animation: scaleUpBounce 1.2s ease-out forwards;
 }
 
 .cover.show button {
-    animation: scaleUp 1.4s ease-out forwards;
+    animation: scaleUpBounce 1.4s ease-out forwards;
 }
