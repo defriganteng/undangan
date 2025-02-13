@@ -107,15 +107,15 @@ body {
 
 /* Awalnya sembunyikan isi undangan */
 .content {
-    display: none;
     opacity: 0;
+    visibility: hidden;
     padding: 60px 20px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 /* Animasi fade-in dan slide-up */
@@ -132,8 +132,8 @@ body {
 
 /* Saat undangan dibuka, tampilkan dengan animasi */
 .content.show {
-    display: flex;
     opacity: 1;
+    visibility: visible;
 }
 
 /* Terapkan animasi ke masing-masing elemen */
