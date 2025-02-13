@@ -1,6 +1,11 @@
 document.getElementById("openInvitation").addEventListener("click", function () {
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
-    document.getElementById("content").scrollIntoView({ behavior: "smooth" });
+    let content = document.getElementById("content");
+
+    // Tambahkan kelas "show" agar teks muncul
+    content.classList.add("show");
+
+    content.scrollIntoView({ behavior: "smooth" });
 });
 
 // Fungsi untuk menambahkan kelas "show" saat elemen muncul di layar
