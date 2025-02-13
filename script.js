@@ -1,8 +1,10 @@
-// Event klik tombol "Buka Undangan"
 document.getElementById("openInvitation").addEventListener("click", function () {
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
     document.getElementById("content").style.opacity = "1"; // Menampilkan isi undangan
     document.getElementById("bgMusic").play(); // Memutar musik
+
+    // Tambahkan kelas 'show' agar animasi berjalan
+    document.getElementById("content").classList.add("show");
 
     // Scroll ke isi undangan
     document.getElementById("content").scrollIntoView({ behavior: "smooth" });
