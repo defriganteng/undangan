@@ -2,11 +2,13 @@ document.getElementById("openInvitation").addEventListener("click", function () 
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
     let content = document.getElementById("content");
     
-    content.style.opacity = "1"; // Menampilkan isi undangan
-    content.classList.add("show"); // Menambahkan kelas untuk animasi
+    content.style.display = "flex"; // Pastikan elemen tampil dulu
+    setTimeout(() => {
+        content.classList.add("show"); // Tambahkan kelas animasi setelah sedikit delay
+    }, 100); // Delay 100ms untuk memastikan browser mengenali perubahan
     
     document.getElementById("bgMusic").play(); // Memutar musik
-    
+
     // Tambahkan sedikit delay sebelum scroll untuk memastikan efek muncul
     setTimeout(() => {
         content.scrollIntoView({ behavior: "smooth" });
