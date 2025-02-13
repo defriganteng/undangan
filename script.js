@@ -2,7 +2,7 @@ document.getElementById("openInvitation").addEventListener("click", function () 
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
     let content = document.getElementById("content");
 
-    // Tambahkan kelas "show" agar teks muncul
+    // Pastikan seluruh isi undangan terlihat
     content.classList.add("show");
 
     content.scrollIntoView({ behavior: "smooth" });
@@ -23,8 +23,8 @@ const observer = new IntersectionObserver(observeElements, {
     threshold: 0.3, // Animasi dimulai saat 30% elemen terlihat di layar
 });
 
-// Daftar elemen yang akan diamati untuk animasi
-document.querySelectorAll(".content h2, .content h1, .content p, .scroll-indicator").forEach(el => {
+// Amati elemen `.content` juga agar bisa ditampilkan dengan benar
+document.querySelectorAll(".content, .content h2, .content h1, .content p, .scroll-indicator").forEach(el => {
     observer.observe(el);
 });
 
