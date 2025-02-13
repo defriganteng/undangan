@@ -203,7 +203,7 @@ html {
 
 
 
-/* Efek animasi fade-in dan slide-up untuk teks isi undangan */
+/* Animasi fade-in dan slide-up untuk isi undangan */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -215,19 +215,17 @@ html {
     }
 }
 
-/* Terapkan animasi ke elemen isi undangan */
+/* Sembunyikan teks sebelum animasi berjalan */
 .content h2,
 .content h1,
 .content p {
-    opacity: 0; /* Sembunyikan sebelum animasi berjalan */
+    opacity: 0;
     transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* Saat isi undangan muncul, jalankan animasi */
 .content.show h2,
 .content.show h1,
 .content.show p {
-    opacity: 1;
-    transform: translateY(0);
+    animation: fadeInUp 0.8s ease-out forwards;
 }
