@@ -2,9 +2,9 @@ document.getElementById("openInvitation").addEventListener("click", function () 
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
     let content = document.getElementById("content");
     
-    content.style.display = "flex"; // Pastikan elemen tampil dulu
+    content.style.display = "flex"; // Pastikan elemen terlihat
 
-    // Force reflow agar animasi dikenali
+    // Paksa reflow agar browser mengenali perubahan sebelum menambahkan kelas
     void content.offsetWidth;
 
     setTimeout(() => {
@@ -18,7 +18,6 @@ document.getElementById("openInvitation").addEventListener("click", function () 
         content.scrollIntoView({ behavior: "smooth" });
     }, 500);
 });
-
 
 // Fungsi untuk mengambil parameter dari URL
 function getQueryParam(param) {
