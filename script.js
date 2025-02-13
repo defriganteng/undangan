@@ -1,20 +1,15 @@
 document.getElementById("openInvitation").addEventListener("click", function () {
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
     let content = document.getElementById("content");
-    
+
     console.log("Tombol diklik, menampilkan undangan...");
 
-    content.style.display = "flex"; // Pastikan elemen terlihat
-    console.log("Elemen tampil, memeriksa kelas...");
-
-    // Paksa reflow agar animasi dikenali
-    void content.offsetWidth;
-
+    // Gunakan timeout untuk memastikan perubahan dikenali oleh browser
     setTimeout(() => {
-        content.classList.add("show"); // Tambahkan kelas animasi setelah sedikit delay
+        content.classList.add("show");
         console.log("Kelas .show ditambahkan:", content.classList.contains("show"));
-    }, 50);
-
+    }, 50); // Delay kecil agar browser mengenali perubahan
+    
     document.getElementById("bgMusic").play(); // Memutar musik
 
     // Tambahkan sedikit delay sebelum scroll untuk memastikan efek muncul
