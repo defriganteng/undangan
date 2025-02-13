@@ -41,20 +41,23 @@ body {
     margin: 5px 0 30px;
 }
 
-/* Kepada Yth & Nama Tamu */
+/* Kepada Yth */
 .guest-title {
-    font-family: Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
+    font-family: 'Merriweather', serif; /* Font lebih profesional */
+    font-size: 16px; /* Ukuran lebih kecil */
+    font-weight: 700; /* Bold agar tetap jelas */
+    margin-bottom: 3px;
+    text-transform: uppercase; /* Memberikan kesan lebih formal */
 }
 
+/* Nama Tamu */
 .guest-name {
-    font-family: Arial, sans-serif;
-    font-size: 22px;
-    font-weight: normal;
+    font-family: 'Merriweather', serif; /* Sama dengan Kepada Yth agar serasi */
+    font-size: 22px; /* Lebih besar dari Kepada Yth */
+    font-weight: 400; /* Regular agar lebih elegan */
     margin-bottom: 40px;
 }
+
 
 /* Tombol "Buka Undangan" */
 .cover button {
