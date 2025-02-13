@@ -105,16 +105,16 @@ body {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Isi Undangan */
+/* Awalnya sembunyikan isi undangan */
 .content {
-    display: none; /* Awalnya disembunyikan */
+    display: none;
+    opacity: 0;
     padding: 60px 20px;
-    background: rgba(255, 255, 255, 0.01);
     min-height: 100vh;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Sembunyikan sebelum tombol ditekan */
     transition: opacity 1s ease-in-out;
 }
 
@@ -122,7 +122,7 @@ body {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(50px);
     }
     to {
         opacity: 1;
@@ -130,16 +130,23 @@ body {
     }
 }
 
-/* Terapkan animasi saat kelas .show ditambahkan */
+/* Saat undangan dibuka, tampilkan dengan animasi */
 .content.show {
-    display: flex; /* Pastikan tampil saat tombol ditekan */
+    display: flex;
     opacity: 1;
 }
 
-.content.show h2,
-.content.show h1,
-.content.show p {
+/* Terapkan animasi ke masing-masing elemen */
+.content.show h2 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.content.show h1 {
     animation: fadeInUp 1s ease-out forwards;
+}
+
+.content.show p {
+    animation: fadeInUp 1.2s ease-out forwards;
 }
 
 /* Teks di Isi Undangan */
