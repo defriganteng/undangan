@@ -268,3 +268,43 @@ html {
     font-size: 1.1em;
     line-height: 1.6;
 }
+
+
+/* Tambahkan kode CSS ini setelah style yang sudah ada */
+
+/* Override background attachment untuk body */
+body {
+    background-attachment: scroll !important;
+}
+
+/* Style untuk container konten */
+.content {
+    position: relative;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.second-page {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tambahkan background overlay untuk memastikan konten tetap terbaca */
+.content::before,
+.second-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Pastikan cover tetap fullscreen dan tidak terpengaruh scroll */
+.cover {
+    position: relative;
+    z-index: 2;
+    background-attachment: scroll;
+}
