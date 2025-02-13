@@ -9,36 +9,8 @@ body {
     background-attachment: fixed;
     text-align: center;
     overflow: hidden; /* Mengunci scroll sebelum tombol ditekan */
+    color: #fff;
 }
-
-/* Responsivitas untuk Mobile */
-@media screen and (max-width: 768px) {
-    .cover-title {
-        font-size: 24px; /* Ukuran teks lebih kecil di mobile */
-    }
-    .guest-name {
-        font-size: 20px;
-    }
-    .open-invitation {
-        padding: 12px 20px; /* Tombol lebih besar untuk mudah ditekan */
-        font-size: 18px;
-    }
-}
-
-/* Responsivitas untuk Desktop */
-@media screen and (min-width: 1024px) {
-    .cover-title {
-        font-size: 36px;
-    }
-    .guest-name {
-        font-size: 28px;
-    }
-    .open-invitation {
-        padding: 15px 25px;
-        font-size: 20px;
-    }
-}
-
 
 /* Sampul Undangan */
 .cover {
@@ -48,68 +20,67 @@ body {
     justify-content: center;
     align-items: center;
     background: url('sampul.jpg') no-repeat center center/cover;
-    color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     padding-top: 40px;
 }
 
-/* Teks di Sampul */
+/* Judul Undangan */
 .wedding-title {
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-top: -40px;
-    margin-bottom: 60px;
+    margin: 10px 0;
 }
 
+/* Nama Pasangan */
 .couple-names {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-margin-top: -20px;
-    margin-bottom: 200px;
+    margin: 5px 0 30px;
 }
 
-/* Font sederhana untuk "Kepada Yth" dan "Nama Tamu" */
+/* Kepada Yth & Nama Tamu */
 .guest-title {
-    font-family: Arial, sans-serif; /* Font sederhana */
-    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
     font-weight: bold;
-    margin-bottom: 3px;
+    margin-bottom: 5px;
 }
 
 .guest-name {
-    font-family: Arial, sans-serif; /* Font sederhana */
-    font-size: 24px;
+    font-family: Arial, sans-serif;
+    font-size: 22px;
     font-weight: normal;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
+
 /* Tombol "Buka Undangan" */
 .cover button {
     background: linear-gradient(135deg, #DDA853, #B8863B);
     color: white;
     border: none;
-    padding: 15px 40px;
-    font-size: 1.3em;
+    padding: 12px 30px;
+    font-size: 1.2em;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 25px;
     transition: all 0.3s ease-in-out;
     font-weight: bold;
-    margin-top: 100px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .cover button:hover {
     background: linear-gradient(135deg, #B8863B, #8B6508);
     transform: scale(1.05);
-    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 /* Isi Undangan */
 .content {
-    padding: 50px;
-    background: rgba(255, 255, 255, 0.01); /* Mengubah background menjadi transparan */
+    padding: 60px 20px;
+    background: rgba(255, 255, 255, 0.1); /* Lebih terlihat dibanding sebelumnya */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -117,11 +88,12 @@ margin-top: -20px;
     align-items: center;
     opacity: 0; /* Sembunyikan sebelum tombol ditekan */
     transition: opacity 1s ease-in-out;
+    border-radius: 15px;
 }
 
 /* Teks di Isi Undangan */
 .content .wedding-title {
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Playfair Display', serif;
@@ -129,21 +101,21 @@ margin-top: -20px;
 }
 
 .content .couple-names {
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
     color: #fff;
 }
 
 .content .wedding-date {
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-top: 10px;
     color: #fff;
 }
 
-/* Indikator Scroll (Tanpa Fungsi Klik) */
+/* Indikator Scroll */
 .scroll-indicator {
-    margin-top: 50px;
+    margin-top: 30px;
     text-align: center;
     font-size: 1.2em;
     color: #A6CDC6;
@@ -164,4 +136,38 @@ margin-top: -20px;
 /* Efek Smooth Scroll */
 html {
     scroll-behavior: smooth;
+}
+
+/* Responsivitas untuk Mobile */
+@media screen and (max-width: 768px) {
+    .wedding-title {
+        font-size: 1.4em;
+    }
+    .couple-names {
+        font-size: 2em;
+    }
+    .guest-name {
+        font-size: 20px;
+    }
+    .cover button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+}
+
+/* Responsivitas untuk Desktop */
+@media screen and (min-width: 1024px) {
+    .wedding-title {
+        font-size: 1.8em;
+    }
+    .couple-names {
+        font-size: 3em;
+    }
+    .guest-name {
+        font-size: 24px;
+    }
+    .cover button {
+        font-size: 1.3em;
+        padding: 15px 35px;
+    }
 }
