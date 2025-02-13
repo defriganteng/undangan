@@ -8,7 +8,7 @@ body {
     background: url('background1.jpg') no-repeat center center fixed;
     background-attachment: fixed;
     text-align: center;
-    overflow: hidden;
+    /*overflow: hidden;*/
     color: #fff;
 
     background-size: cover;
