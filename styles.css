@@ -231,18 +231,19 @@ html {
 }
 
 
-/* Animasi fade-in dengan efek scale-up dan bounce halus */
+/* Animasi scale-up dengan efek bounce dari pusat elemen */
 @keyframes scaleUpBounce {
     0% {
         opacity: 0;
         transform: scale(0.8);
+        transform-origin: center;
     }
     60% {
         opacity: 1;
         transform: scale(1.1);
     }
     100% {
-        opacity: 1; /* Pastikan elemen tetap terlihat */
+        opacity: 1;
         transform: scale(1);
     }
 }
@@ -254,6 +255,7 @@ html {
 .cover button {
     opacity: 0;
     transform: scale(0.8);
+    transform-origin: center; /* Pastikan animasi bertumpu di tengah elemen */
     animation-fill-mode: forwards; /* Pastikan animasi berhenti di frame terakhir */
 }
 
