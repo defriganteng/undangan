@@ -231,4 +231,40 @@ html {
 }
 
 
+/* Animasi fade-in dan slide-up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+/* Sembunyikan elemen sebelum animasi */
+.cover h2,
+.cover h1,
+.guest-title,
+.cover button {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+/* Jalankan animasi saat halaman dimuat */
+.cover.show h2 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.cover.show h1 {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.cover.show .guest-title {
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+.cover.show button {
+    animation: fadeInUp 1.4s ease-out forwards;
+}
