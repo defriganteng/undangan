@@ -87,6 +87,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0; /* Awalnya tidak terlihat */
+    visibility: hidden; /* Pastikan tidak muncul di layar */
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 /* Animasi scale-up */
@@ -117,7 +120,7 @@ body {
     animation-fill-mode: forwards;
 }
 
-/* Jalankan animasi saat halaman dimuat */
+/* Animasi saat elemen muncul */
 .cover.show h2,
 .content.show h2 {
     animation: scaleUp 1.2s ease-out forwards;
