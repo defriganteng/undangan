@@ -23,60 +23,7 @@ body {
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     position: relative;
-}
-
-/* Styling Judul dan Nama */
-.wedding-title {
-    font-size: 1.6em;
-    font-weight: bold;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.couple-names {
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 40px;
-}
-
-/* Styling Nama Tamu */
-.guest-title .kepada-yth {
-    font-family: 'Merriweather', serif;
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    display: block;
-}
-
-.guest-title #guest-name {
-    font-family: 'Merriweather', serif;
-    font-size: 24px;
-    font-weight: 400;
-    display: block;
-}
-
-/* Tombol "Buka Undangan" */
-.cover button {
-    background: transparent;
-    color: white;
-    border: 2px solid white;
-    padding: 14px 35px;
-    font-size: 1.3em;
-    cursor: pointer;
-    border-radius: 30px;
-    font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-
-.cover button:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-}
-
-.cover button:active {
-    transform: scale(0.95);
-    background: rgba(255, 255, 255, 0.3);
+    text-align: center; /* Pastikan teks tetap di tengah */
 }
 
 /* Isi Undangan */
@@ -87,6 +34,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center; /* Pastikan teks tetap di tengah */
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
@@ -96,6 +44,15 @@ body {
 .content.show {
     opacity: 1;
     visibility: visible;
+}
+
+/* Pastikan teks berada di tengah vertikal */
+.wedding-title,
+.couple-names,
+.guest-title,
+.wedding-date {
+    display: block;
+    width: 100%;
 }
 
 /* Animasi scale-up */
@@ -145,6 +102,29 @@ body {
 .cover.show button,
 .content.show .scroll-indicator {
     animation: scaleUp 2s ease-out forwards;
+}
+
+/* Tombol "Buka Undangan" */
+.cover button {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 14px 35px;
+    font-size: 1.3em;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.cover button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.cover button:active {
+    transform: scale(0.95);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Efek Smooth Scroll */
