@@ -55,3 +55,23 @@ if (guestName) {
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".cover").classList.add("show");
 });
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollIndicator = document.getElementById('scrollIndicator');
+    
+    window.addEventListener('scroll', function() {
+        const secondPage = document.getElementById('secondContent');
+        const secondPageTop = secondPage.getBoundingClientRect().top;
+        
+        // Sembunyikan scroll indicator ketika mencapai halaman kedua
+        if (secondPageTop <= window.innerHeight) {
+            scrollIndicator.style.opacity = '0';
+            scrollIndicator.style.visibility = 'hidden';
+        } else {
+            scrollIndicator.style.opacity = '1';
+            scrollIndicator.style.visibility = 'visible';
+        }
+    });
+});
