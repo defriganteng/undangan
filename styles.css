@@ -1,7 +1,7 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Merriweather:wght@400;700&display=swap');
 
-body {
+.background {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
