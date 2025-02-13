@@ -250,7 +250,7 @@ html {
 .guest-title,
 .cover button {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.01);
     transform-origin: center; /* Pastikan animasi bertumpu di tengah elemen */
     animation-fill-mode: forwards; /* Pastikan animasi berhenti di kondisi akhir */
 }
