@@ -6,7 +6,8 @@ body {
     margin: 0;
     padding: 0;
     background: url('background1.jpg') no-repeat center center fixed;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
+    transform: translate3d(0, 0, 0);
     text-align: center;
     overflow: hidden;
     color: #fff;
