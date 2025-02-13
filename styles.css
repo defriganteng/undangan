@@ -35,8 +35,8 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     positin: relative;
-    margin-top: -80px;
-    margin-bottom: 20px;
+    top: -100px;
+    margin-bottom: 10px;
 }
 
 /* Nama Pasangan */
@@ -45,7 +45,7 @@ body {
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
     position: relative;
-    margin-top: -40px;
+    top: -80px;
     margin-bottom: 50px;
 }
 
