@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Merriweather:wght@400;700&display=swap');
 
 .background {
-    font-family: 'Playfair Display', serif;
+    
     margin: 0;
     padding: 0;
     background: url('background1.jpg') no-repeat center center fixed;
     background-attachment: fixed;
-    text-align: center;
+    
     overflow: hidden;
-    color: #fff;
+    
 
     background-size: cover;
     z-index: -1;
@@ -31,6 +31,8 @@
 
 /* Isi Undangan */
 .content {
+    font-family: 'Playfair Display', serif;
+    color: #fff;
     padding: 60px 20px;
     min-height: 100vh;
     display: flex;
