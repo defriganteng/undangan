@@ -1,5 +1,8 @@
 /* Font & Reset */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap');
+/* Font lebih profesional */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Merriweather:wght@400;700&display=swap');
+
 
 body {
     font-family: 'Playfair Display', serif;
@@ -42,16 +45,16 @@ body {
 }
 
 /* Kepada Yth */
-.guest-title {
+.guest-title p: first-child {
     font-family: 'Merriweather', serif; /* Font lebih profesional */
     font-size: 5px; /* Ukuran lebih kecil */
     font-weight: 700; /* Bold agar tetap jelas */
-    margin-bottom: 3px;
+    margin-bottom: 10px;
     text-transform: uppercase; /* Memberikan kesan lebih formal */
 }
 
 /* Nama Tamu */
-.guest-name {
+.guest-name p#guest-name {
     font-family: 'Merriweather', serif; /* Sama dengan Kepada Yth agar serasi */
     font-size: 22px; /* Lebih besar dari Kepada Yth */
     font-weight: 400; /* Regular agar lebih elegan */
