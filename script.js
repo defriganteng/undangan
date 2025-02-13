@@ -3,12 +3,14 @@ document.getElementById("openInvitation").addEventListener("click", function () 
     let content = document.getElementById("content");
     
     content.style.opacity = "1"; // Menampilkan isi undangan
-    content.classList.add("show"); // Tambahkan kelas animasi
-
+    content.classList.add("show"); // Menambahkan kelas untuk animasi
+    
     document.getElementById("bgMusic").play(); // Memutar musik
-
-    // Scroll ke isi undangan
-    content.scrollIntoView({ behavior: "smooth" });
+    
+    // Tambahkan sedikit delay sebelum scroll untuk memastikan efek muncul
+    setTimeout(() => {
+        content.scrollIntoView({ behavior: "smooth" });
+    }, 500);
 });
 
 
