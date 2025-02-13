@@ -223,3 +223,48 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
+
+
+/* Styling untuk halaman kedua */
+.second-page {
+    background: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    padding: 80px 20px;
+}
+
+.couple-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.groom, .bride {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    min-width: 250px;
+}
+
+.wedding-symbol {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4em;
+    margin: 0 20px;
+}
+
+.groom h3, .bride h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.groom p, .bride p {
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
