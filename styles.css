@@ -77,25 +77,39 @@ body {
 }
 
 
-/* Tombol "Buka Undangan" */
+/* Tombol "Buka Undangan" dengan desain mewah */
 .cover button {
-    background: linear-gradient(135deg, #DDA853, #B8863B);
+    background: linear-gradient(135deg, #FFD700, #DDA853);
     color: white;
     border: none;
-    padding: 12px 30px;
-    font-size: 1.2em;
+    padding: 14px 35px;
+    font-size: 1.3em;
     cursor: pointer;
-    border-radius: 25px;
-    transition: all 0.3s ease-in-out;
+    border-radius: 30px;
     font-weight: bold;
     margin-top: 50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
 }
 
+/* Efek kilauan saat hover */
 .cover button:hover {
-    background: linear-gradient(135deg, #B8863B, #8B6508);
-    transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #DDA853, #B8863B);
+    transform: scale(1.08);
+    box-shadow: 0px 6px 20px rgba(255, 215, 0, 0.7);
+}
+
+/* Efek animasi saat muncul */
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+    50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(255, 215, 0, 0.8); }
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
+}
+
+.cover button {
+    animation: pulse 2s infinite ease-in-out;
 }
 
 /* Isi Undangan */
