@@ -47,8 +47,14 @@ body {
 }
 
 /* Pastikan teks berada di tengah vertikal */
-.wedding-title,
-.couple-names,
+.wedding-title {
+    position: relative;
+    top: -50px;
+}
+.couple-names {
+    position: relative;
+    top: -50px;
+}
 .guest-title,
 .wedding-date {
     display: block;
