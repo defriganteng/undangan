@@ -1,21 +1,26 @@
 document.getElementById("openInvitation").addEventListener("click", function () {
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
-    let content = document.getElementById("content");
+    document.getElementById("content").scrollIntoView({ behavior: "smooth" });
+});
 
-    console.log("Tombol diklik, menampilkan undangan...");
+// Fungsi untuk menambahkan kelas "show" saat elemen muncul di layar
+function observeElements(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show"); // Tambahkan kelas "show" untuk memulai animasi
+            observer.unobserve(entry.target); // Hentikan observer setelah elemen terlihat
+        }
+    });
+}
 
-    // Gunakan timeout untuk memastikan perubahan dikenali oleh browser
-    setTimeout(() => {
-        content.classList.add("show");
-        console.log("Kelas .show ditambahkan:", content.classList.contains("show"));
-    }, 50); // Delay kecil agar browser mengenali perubahan
-    
-    document.getElementById("bgMusic").play(); // Memutar musik
+// Buat observer untuk mendeteksi elemen masuk ke viewport
+const observer = new IntersectionObserver(observeElements, {
+    threshold: 0.3, // Animasi dimulai saat 30% elemen terlihat di layar
+});
 
-    // Tambahkan sedikit delay sebelum scroll untuk memastikan efek muncul
-    setTimeout(() => {
-        content.scrollIntoView({ behavior: "smooth" });
-    }, 500);
+// Daftar elemen yang akan diamati untuk animasi
+document.querySelectorAll(".content h2, .content h1, .content p, .scroll-indicator").forEach(el => {
+    observer.observe(el);
 });
 
 // Fungsi untuk mengambil parameter dari URL
@@ -33,8 +38,6 @@ if (guestName) {
 } else {
     document.getElementById("guest-name").textContent = "Nama Tamu"; // Default jika tidak ada nama di URL
 }
-
-
 
 // Tambahkan animasi ke elemen sampul saat halaman dimuat
 document.addEventListener("DOMContentLoaded", function () {
