@@ -17,13 +17,14 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background: url('sampul.jpg') no-repeat center center/cover;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     position: relative;
     text-align: center;/* Pastikan teks tetap di tengah */
+    padding: 20px 0;
 }
 
 /* Isi Undangan */
@@ -115,6 +116,8 @@ body {
     border-radius: 30px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
+    margin-top: auto;
+    matgin-bottom: 40px;
 }
 
 .cover button:hover {
