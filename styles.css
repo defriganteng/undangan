@@ -15,7 +15,7 @@ body {
     color: #fff;
 }
 
-/* Sampul Undangan */
+/* Struktur Sampul Undangan */
 .cover {
     height: 100vh;
     display: flex;
@@ -23,31 +23,33 @@ body {
     justify-content: center;
     align-items: center;
     background: url('sampul.jpg') no-repeat center center/cover;
+    color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     padding-top: 40px;
     position: relative;
 }
 
-/* Judul Undangan */
+/* Memindahkan "The Wedding Of" lebih ke atas */
 .wedding-title {
     font-size: 1.6em;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
-    positin: relative;
-    top: -100px;
-    margin-bottom: 10px;
+    position: relative;
+    top: -120px; /* Geser lebih ke atas */
+    margin-bottom: 5px; /* Mengurangi jarak dengan nama pasangan */
 }
 
-/* Nama Pasangan */
+/* Memindahkan "Pria & Wanita" lebih ke atas dan menyesuaikan jarak */
 .couple-names {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
     position: relative;
-    top: -80px;
-    margin-bottom: 50px;
+    top: -110px; /* Naik ke atas tetapi tetap di bawah "The Wedding Of" */
+    margin-bottom: 40px; /* Memberikan jarak yang lebih seimbang */
 }
+
 
 /* Pastikan tidak ada pewarisan ukuran font dari elemen induk */
 .guest-title {
