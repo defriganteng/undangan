@@ -33,3 +33,10 @@ if (guestName) {
 } else {
     document.getElementById("guest-name").textContent = "Nama Tamu"; // Default jika tidak ada nama di URL
 }
+
+
+
+// Tambahkan animasi ke elemen sampul saat halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelector(".cover").classList.add("show");
+});
