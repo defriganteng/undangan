@@ -138,15 +138,15 @@ body {
 
 /* Terapkan animasi ke masing-masing elemen */
 .content.show h2 {
-    animation: fadeInUp 2s ease-out forwards;
+    animation: fadeInUp 3s ease-out forwards;
 }
 
 .content.show h1 {
-    animation: fadeInUp 2s ease-out forwards;
+    animation: fadeInUp 3s ease-out forwards;
 }
 
 .content.show p {
-    animation: fadeInUp 2s ease-out forwards;
+    animation: fadeInUp 3s ease-out forwards;
 }
 
 /* Teks di Isi Undangan */
