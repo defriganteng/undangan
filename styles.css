@@ -57,7 +57,7 @@ body {
 
 /* Khusus untuk menggeser tulisan di halaman isi */
 .content .wedding-title {
-    margin-top: -100px;  /* Menggeser "The Wedding of" ke atas */
+    margin-top: -200px;  /* Menggeser "The Wedding of" lebih ke atas */
 }
 
 .content .couple-names {
