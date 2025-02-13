@@ -26,12 +26,6 @@ body {
     text-align: center;
 }
 
-/* Modifikasi untuk menggeser judul ke atas */
-.cover .wedding-title,
-.cover .couple-names {
-    margin-top: -80px; /* Nilai negatif untuk menggeser ke atas */
-}
-
 /* Isi Undangan */
 .content {
     padding: 60px 20px;
@@ -121,7 +115,7 @@ body {
     border-radius: 30px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
-    margin-top: 50px;
+    margin-top: 50px; /* Menambahkan margin atas untuk menggeser tombol ke bawah */
 }
 
 .cover button:hover {
