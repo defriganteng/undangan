@@ -1,8 +1,5 @@
-/* Font & Reset */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap');
-/* Font lebih profesional */
+/* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Merriweather:wght@400;700&display=swap');
-
 
 body {
     font-family: 'Playfair Display', serif;
@@ -11,7 +8,7 @@ body {
     background: url('background1.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     text-align: center;
-    overflow: hidden; /* Mengunci scroll sebelum tombol ditekan */
+    overflow: hidden;
     color: #fff;
 }
 
@@ -25,59 +22,41 @@ body {
     background: url('sampul.jpg') no-repeat center center/cover;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-    padding-top: 40px;
     position: relative;
 }
 
-/* Memindahkan "The Wedding Of" lebih ke atas */
+/* Styling Judul dan Nama */
 .wedding-title {
     font-size: 1.6em;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
-    position: relative;
-    top: -120px; /* Geser lebih ke atas */
-    margin-bottom: 5px; /* Mengurangi jarak dengan nama pasangan */
 }
 
-/* Memindahkan "Pria & Wanita" lebih ke atas dan menyesuaikan jarak */
 .couple-names {
     font-size: 3em;
     font-weight: bold;
     font-family: 'Great Vibes', cursive;
-    position: relative;
-    top: -110px; /* Naik ke atas tetapi tetap di bawah "The Wedding Of" */
-    margin-bottom: 40px; /* Memberikan jarak yang lebih seimbang */
+    margin-bottom: 40px;
 }
 
-
-/* Pastikan tidak ada pewarisan ukuran font dari elemen induk */
-.guest-title {
-    font-size: unset; /* Menghapus pewarisan font dari parent */
-    text-align: center;
-}
-
-/* Styling khusus untuk "Kepada Yth" */
+/* Styling Nama Tamu */
 .guest-title .kepada-yth {
     font-family: 'Merriweather', serif;
-    font-size: 14px; /* Ukuran lebih kecil */
+    font-size: 14px;
     font-weight: 700;
-    margin-bottom: 5px;
     text-transform: uppercase;
-    display: block; /* Memastikan elemen berdiri sendiri */
+    display: block;
 }
 
-/* Styling khusus untuk "Nama Tamu" */
 .guest-title #guest-name {
     font-family: 'Merriweather', serif;
-    font-size: 24px; /* Ukuran lebih besar */
+    font-size: 24px;
     font-weight: 400;
-    margin-top: 0;
-    display: block; /* Memastikan elemen berdiri sendiri */
+    display: block;
 }
 
-
-/* Tombol "Buka Undangan" dengan desain transparan */
+/* Tombol "Buka Undangan" */
 .cover button {
     background: transparent;
     color: white;
@@ -87,25 +66,20 @@ body {
     cursor: pointer;
     border-radius: 30px;
     font-weight: bold;
-    margin-top: 50px;
     transition: all 0.3s ease-in-out;
-    position: relative;
-    overflow: hidden;
 }
 
-/* Efek hover (agar tombol sedikit membesar dan lebih menarik) */
 .cover button:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
 }
 
-/* Efek animasi saat tombol ditekan */
 .cover button:active {
-    transform: scale(0.95); /* Sedikit mengecil saat ditekan */
+    transform: scale(0.95);
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Awalnya sembunyikan isi undangan */
+/* Isi Undangan */
 .content {
     padding: 60px 20px;
     min-height: 100vh;
@@ -113,15 +87,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
 /* Animasi scale-up */
 @keyframes scaleUp {
     0% {
         opacity: 0;
-        transform: scale(0.8);
-        transform-origin: center bottom; /* Animasi bertumpu di tengah-bawah */
+        transform: scale(0.01);
+        transform-origin: center bottom;
     }
     100% {
         opacity: 1;
@@ -139,164 +112,33 @@ body {
 .content p,
 .scroll-indicator {
     opacity: 0;
-    transform: scale(0.8);
-    transform-origin: center bottom; /* Pastikan animasi bertumpu di tengah-bawah */
-    animation-fill-mode: forwards; /* Pastikan animasi berhenti di kondisi akhir */
+    transform: scale(0.01);
+    transform-origin: center bottom;
+    animation-fill-mode: forwards;
 }
 
-/* Jalankan animasi saat halaman dimuat untuk sampul */
-.cover.show h2 {
-    animation: scaleUp 1.2s ease-out forwards;
-}
-
-.cover.show h1 {
-    animation: scaleUp 1.5s ease-out forwards;
-}
-
-.cover.show .guest-title {
-    animation: scaleUp 1.8s ease-out forwards;
-}
-
-.cover.show button {
-    animation: scaleUp 2s ease-out forwards;
-}
-
-/* Jalankan animasi saat elemen isi undangan muncul di layar */
+/* Jalankan animasi saat halaman dimuat */
+.cover.show h2,
 .content.show h2 {
     animation: scaleUp 1.2s ease-out forwards;
 }
 
+.cover.show h1,
 .content.show h1 {
     animation: scaleUp 1.5s ease-out forwards;
 }
 
+.cover.show .guest-title,
 .content.show p {
     animation: scaleUp 1.8s ease-out forwards;
 }
 
+.cover.show button,
 .content.show .scroll-indicator {
     animation: scaleUp 2s ease-out forwards;
-}
-
-/* Teks di Isi Undangan */
-.content .wedding-title {
-    font-size: 1.5em;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Playfair Display', serif;
-    color: #fff;
-}
-
-.content .couple-names {
-    font-size: 2.5em;
-    font-weight: bold;
-    font-family: 'Great Vibes', cursive;
-    color: #fff;
-}
-
-.content .wedding-date {
-    font-size: 1.3em;
-    margin-top: 10px;
-    color: #fff;
-}
-
-/* Indikator Scroll */
-.scroll-indicator {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #A6CDC6;
-    animation: bounce 1.5s infinite;
-}
-
-.scroll-indicator span {
-    font-size: 2em;
-    display: block;
-}
-
-/* Animasi Indikator */
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
 }
 
 /* Efek Smooth Scroll */
 html {
     scroll-behavior: smooth;
-}
-
-/* Responsivitas untuk Mobile */
-@media screen and (max-width: 768px) {
-    .wedding-title {
-        font-size: 1.4em;
-    }
-    .couple-names {
-        font-size: 2em;
-    }
-    .guest-name {
-        font-size: 20px;
-    }
-    .cover button {
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-}
-
-/* Responsivitas untuk Desktop */
-@media screen and (min-width: 1024px) {
-    .wedding-title {
-        font-size: 1.8em;
-    }
-    .couple-names {
-        font-size: 3em;
-    }
-    .guest-name {
-        font-size: 24px;
-    }
-    .cover button {
-        font-size: 1.3em;
-        padding: 15px 35px;
-    }
-}
-
-
-/* Animasi scale-up dengan efek fade-in */
-@keyframes scaleUp {
-    0% {
-        opacity: 0;
-        transform: scale(0.01);
-        transform-origin: center;
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Sembunyikan elemen sebelum animasi */
-.cover h2,
-.cover h1,
-.guest-title,
-.cover button {
-    opacity: 0;
-    transform: scale(0.01);
-    transform-origin: center bottom; /* Pastikan animasi bertumpu di tengah elemen */
-    animation-fill-mode: forwards; /* Pastikan animasi berhenti di kondisi akhir */
-}
-
-/* Jalankan animasi saat halaman dimuat */
-.cover.show h2 {
-    animation: scaleUp 1.2s ease-out forwards;
-}
-
-.cover.show h1 {
-    animation: scaleUp 1.5s ease-out forwards;
-}
-
-.cover.show .guest-title {
-    animation: scaleUp 1.8s ease-out forwards;
-}
-
-.cover.show button {
-    animation: scaleUp 2s ease-out forwards;
 }
