@@ -55,6 +55,15 @@ body {
     width: 100%;
 }
 
+/* Khusus untuk menggeser tulisan di halaman isi */
+.content .wedding-title {
+    margin-top: -100px;  /* Menggeser "The Wedding of" ke atas */
+}
+
+.content .couple-names {
+    margin-top: 20px;  /* Memberikan jarak antara judul dan nama */
+}
+
 /* Animasi scale-up */
 @keyframes scaleUp {
     0% {
@@ -115,7 +124,7 @@ body {
     border-radius: 30px;
     font-weight: bold;
     transition: all 0.3s ease-in-out;
-    margin-top: 50px; /* Menambahkan margin atas untuk menggeser tombol ke bawah */
+    margin-top: 50px;
 }
 
 .cover button:hover {
