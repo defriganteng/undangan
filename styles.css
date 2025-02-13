@@ -107,6 +107,7 @@ body {
 
 /* Isi Undangan */
 .content {
+    display: none;
     padding: 60px 20px;
     background: rgba(255, 255, 255, 0.01); /* Lebih terlihat dibanding sebelumnya */
     min-height: 100vh;
@@ -203,14 +204,6 @@ html {
 
 
 
-/* Sembunyikan teks sebelum animasi berjalan */
-.content h2,
-.content h1,
-.content p {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
 /* Animasi fade-in dan slide-up */
 @keyframes fadeInUp {
     from {
@@ -224,6 +217,11 @@ html {
 }
 
 /* Terapkan animasi saat kelas .show ditambahkan */
+.content.show {
+    display: flex; /* Pastikan tampil saat tombol ditekan */
+    opacity: 1;
+}
+
 .content.show h2 {
     animation: fadeInUp 0.8s ease-out forwards;
 }
