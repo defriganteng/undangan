@@ -242,6 +242,7 @@ html {
         transform: scale(1.1);
     }
     100% {
+        opacity: 1; /* Pastikan elemen tetap terlihat */
         transform: scale(1);
     }
 }
@@ -253,6 +254,7 @@ html {
 .cover button {
     opacity: 0;
     transform: scale(0.8);
+    animation-fill-mode: forwards; /* Pastikan animasi berhenti di frame terakhir */
 }
 
 /* Jalankan animasi saat halaman dimuat */
