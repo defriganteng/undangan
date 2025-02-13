@@ -106,7 +106,7 @@ body {
 
 /* Tombol "Buka Undangan" */
 .cover button {
-    
+    margin-top: 50px;
     background: transparent;
     color: white;
     border: 2px solid white;
