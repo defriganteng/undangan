@@ -1,5 +1,5 @@
 document.getElementById("openInvitation").addEventListener("click", function () {
-    document.body.style.overflow = "auto"; // Mengaktifkan scroll
+    document.background.style.overflow = "auto"; // Mengaktifkan scroll
     let content = document.getElementById("content");
 
     // Memastikan musik latar diputar
