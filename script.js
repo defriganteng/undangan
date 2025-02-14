@@ -1,6 +1,7 @@
 document.getElementById("openInvitation").addEventListener("click", function () {
     document.body.style.overflow = "auto"; // Mengaktifkan scroll
     let content = document.getElementById("content");
+    let mainWrapper = document.querySelector(".main-content-wrapper");
 
     // Memastikan musik latar diputar
     let bgMusic = document.getElementById("bgMusic");
@@ -11,6 +12,7 @@ document.getElementById("openInvitation").addEventListener("click", function () 
 
     // Pastikan seluruh isi undangan terlihat
     content.classList.add("show");
+    mainWrapper.style.visibility = "visible"; // Memastikan wrapper konten terlihat
 
     content.scrollIntoView({ behavior: "smooth" });
 });
@@ -28,10 +30,12 @@ function observeElements(entries, observer) {
 // Buat observer untuk mendeteksi elemen masuk ke viewport
 const observer = new IntersectionObserver(observeElements, {
     threshold: 0.3, // Animasi dimulai saat 30% elemen terlihat di layar
+    root: null,
+    rootMargin: '0px'
 });
 
-// Amati elemen `.content` agar bisa ditampilkan dengan benar
-document.querySelectorAll(".content, .content h2, .content h1, .content p, .scroll-indicator").forEach(el => {
+// Amati elemen `.content` dan semua elemen animasi
+document.querySelectorAll(".content, .content h2, .content h1, .content p, .scroll-indicator, .couple-info, .wedding-details, .rsvp-section").forEach(el => {
     observer.observe(el);
 });
 
@@ -46,7 +50,7 @@ const guestName = getQueryParam("nama");
 
 // Periksa apakah ada nama di URL
 if (guestName) {
-    document.getElementById("guest-name").textContent = guestName;
+    document.getElementById("guest-name").textContent = decodeURIComponent(guestName);
 } else {
     document.getElementById("guest-name").textContent = "Nama Tamu"; // Default jika tidak ada nama di URL
 }
@@ -54,15 +58,21 @@ if (guestName) {
 // Tambahkan animasi ke elemen sampul saat halaman dimuat
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".cover").classList.add("show");
-});
-
-
-document.addEventListener('DOMContentLoaded', function() {
-    const scrollIndicator = document.getElementById('scrollIndicator');
     
+    // Inisialisasi status scroll indicator
+    const scrollIndicator = document.getElementById('scrollIndicator');
+    const mainWrapper = document.querySelector(".main-content-wrapper");
+    
+    // Pastikan main wrapper tersembunyi saat awal
+    if (mainWrapper) {
+        mainWrapper.style.visibility = "hidden";
+    }
+    
+    // Handler scroll untuk scroll indicator dan parallax effect
     window.addEventListener('scroll', function() {
         const secondPage = document.getElementById('secondContent');
         const secondPageTop = secondPage.getBoundingClientRect().top;
+        const scrollPosition = window.scrollY;
         
         // Sembunyikan scroll indicator ketika mencapai halaman kedua
         if (secondPageTop <= window.innerHeight) {
@@ -72,5 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
             scrollIndicator.style.opacity = '1';
             scrollIndicator.style.visibility = 'visible';
         }
+
+        // Optional: Tambahkan efek parallax pada background
+        const backgroundContainer = document.querySelector('.background-container');
+        if (backgroundContainer) {
+            backgroundContainer.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        }
     });
 });
+
+// Fungsi untuk konfirmasi kehadiran
+function confirmAttendance(status) {
+    const message = status === 'hadir' ? 
+        'Terima kasih atas konfirmasi kehadiran Anda!' : 
+        'Terima kasih atas informasinya, kami mohon maaf Anda tidak dapat hadir.';
+    alert(message);
+}
