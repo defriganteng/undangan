@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Merriweather:wght@400;700&display=swap');
 
 .background {
-    
-    margin: 0;
-    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
     background: url('background1.jpg') no-repeat center center fixed;
     background-attachment: fixed;
     
@@ -33,6 +33,7 @@
 .content {
     font-family: 'Playfair Display', serif;
     color: #fff;
+    z-index: 1;
     padding: 60px 20px;
     min-height: 100vh;
     display: flex;
