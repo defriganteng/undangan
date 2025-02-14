@@ -3,9 +3,7 @@
 
 .background {
     position: fixed;
-    top: 0;
-    left: 0;
-    background: url('background1.jpg') no-repeat center center fixed;
+    background-image: url("background1.jpg") no-repeat center center fixed;
     background-attachment: fixed;
     
     overflow: hidden;
