@@ -101,12 +101,15 @@ function confirmAttendance(status) {
 
 
 
-function adjustBackgroundHeight() {
-    document.querySelector('.background-container').style.height = `${window.innerHeight}px`;
+function adjustBackgroundPosition() {
+    const bg = document.querySelector('.background-container');
+    bg.style.height = `${window.innerHeight}px`; // Sesuaikan tinggi dengan viewport sebenarnya
+    bg.style.top = `${window.scrollY}px`; // Pastikan background tetap pada posisinya
 }
 
-// Set tinggi awal saat halaman dimuat
-adjustBackgroundHeight();
+// Atur posisi awal
+adjustBackgroundPosition();
 
-// Update tinggi saat ukuran layar berubah
-window.addEventListener('resize', adjustBackgroundHeight);
+// Update posisi saat scroll dan resize
+window.addEventListener('scroll', adjustBackgroundPosition);
+window.addEventListener('resize', adjustBackgroundPosition);
