@@ -6,7 +6,7 @@
     background-image: url("background1.jpg") no-repeat center center fixed;
     background-attachment: fixed;
     
-    overflow: hidden;
+    /*overflow: hidden;*/
     
 
     background-size: cover;
