@@ -1,38 +1,40 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Merriweather:wght@400;700&display=swap');
 
-body {
-    font-family: 'Playfair Display', serif;
+/* Reset dasar */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    overflow: hidden;
+    overflow-x: hidden;
     color: #fff;
-    overscroll-behavior: none; /* Prevent bounce effect */
-    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+    position: relative;
 }
 
 /* Background Container */
 .background-container {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     background: url('background1.jpg') no-repeat center center;
     background-size: cover;
-    /*background-attachment: fixed;*/
     z-index: -1;
-    transform: translateZ(0); /* Force hardware acceleration */
-    -webkit-transform: translateZ(0);
-    will-change: transform; /* Optimize for animations */
-    pointer-events: none; /* Prevent touch events on background */
-    touch-action: none; /* Prevent touch manipulation */
+    pointer-events: none;
 }
 
 /* Struktur Sampul Undangan */
 .cover {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -241,9 +243,10 @@ body {
 
 /* Efek Smooth Scroll */
 html {
-    scroll-behavior: smooth;
-    overscroll-behavior: none; /* Prevent bounce effect */
-    -webkit-overflow-scrolling: touch; /* Smooth scroll on iOS */
+     width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 /* Styling untuk halaman kedua */
@@ -292,6 +295,24 @@ html {
 .main-content-wrapper {
     position: relative;
     z-index: 1;
-    /* Optional: tambahkan jika ingin scroll lebih smooth di iOS */
-    -webkit-overflow-scrolling: touch;
+    width: 100%;
+}
+
+
+.page-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
 }
