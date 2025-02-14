@@ -1,40 +1,30 @@
 /* Import Font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&family=Merriweather:wght@400;700&display=swap');
 
-/* Reset dasar */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
 body {
     font-family: 'Playfair Display', serif;
-    width: 100%;
-    height: 100%;
+    margin: 0;
+    padding: 0;
     text-align: center;
-    overflow-x: hidden;
+    overflow: hidden;
     color: #fff;
-    position: relative;
 }
 
 /* Background Container */
 .background-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('background1.jpg') no-repeat center center;
-    background-size: cover;
+    background: url('background1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
     z-index: -1;
-    pointer-events: none;
 }
 
 /* Struktur Sampul Undangan */
 .cover {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -243,10 +233,7 @@ body {
 
 /* Efek Smooth Scroll */
 html {
-     width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    position: relative;
+    scroll-behavior: smooth;
 }
 
 /* Styling untuk halaman kedua */
@@ -290,29 +277,4 @@ html {
     font-family: 'Merriweather', serif;
     font-size: 1.1em;
     line-height: 1.6;
-}
-
-.main-content-wrapper {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-}
-
-
-.page-wrapper {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-
-.background-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    pointer-events: none;
 }
