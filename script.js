@@ -101,13 +101,17 @@ function confirmAttendance(status) {
 
 
 
-function fixBackgroundPosition() {
+function updateBackgroundHeight() {
     const bg = document.querySelector('.background-container');
-    const scrollOffset = window.scrollY;
-
-    // Gunakan transform agar background tidak ikut terscroll
-    bg.style.transform = `translateY(${scrollOffset}px)`;
+    bg.style.height = `${window.innerHeight}px`; // Pastikan tinggi sesuai dengan viewport nyata
 }
 
-// Pastikan fungsi dijalankan saat scroll terjadi
-window.addEventListener('scroll', fixBackgroundPosition);
+// Jalankan saat halaman dimuat
+updateBackgroundHeight();
+
+// Pastikan update berjalan saat resize atau perubahan viewport
+window.addEventListener('resize', updateBackgroundHeight);
+
+// Observer untuk mendeteksi perubahan tinggi viewport secara real-time (termasuk saat search bar Chrome muncul/hilang)
+const observer = new ResizeObserver(updateBackgroundHeight);
+observer.observe(document.documentElement);
