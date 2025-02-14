@@ -1,0 +1,4 @@
+<FilesMatch "\.(css|js|jpg|png|gif|svg)$">
+    Require all denied
+    Require host https://undangan123.netlify.app/
+</FilesMatch>
