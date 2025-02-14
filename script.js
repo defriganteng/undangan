@@ -84,10 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         // Optional: Tambahkan efek parallax pada background
-       // const backgroundContainer = document.querySelector('.background-container');
-      //  if (backgroundContainer) {
-           // backgroundContainer.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-  // }
+        const backgroundContainer = document.querySelector('.background-container');
+        if (backgroundContainer) {
+            backgroundContainer.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+        }
     });
 });
 
