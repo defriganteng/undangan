@@ -3,12 +3,11 @@
 
 body {
     font-family: 'Playfair Display', serif;
-    margin: 0;
-    padding: 0;
+    
     text-align: center;
     overflow: hidden;
     color: #fff;
-    height: 100%;
+    
 }
 
 /* Background Container */
