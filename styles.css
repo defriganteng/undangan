@@ -8,7 +8,7 @@ body {
     text-align: center;
     overflow: hidden;
     color: #fff;
-    height: -webkit-fill-available;
+    height: 100%;
 }
 
 /* Background Container */
@@ -237,7 +237,7 @@ body {
 /* Efek Smooth Scroll */
 html {
     scroll-behavior: smooth;
-    height: -webkit-fill-available;
+    height: 100%;
 }
 
 /* Styling untuk halaman kedua */
@@ -281,4 +281,22 @@ html {
     font-family: 'Merriweather', serif;
     font-size: 1.1em;
     line-height: 1.6;
+}
+
+
+/* Nonaktifkan parallax effect di mobile */
+@media (hover: none) and (pointer: coarse) {
+  .background-container {
+    background-attachment: scroll !important;
+    position: absolute;
+    height: auto;
+    min-height: 100%;
+  }
+  
+  /* Workaround untuk viewport dinamis */
+  @supports (-webkit-touch-callout: none) {
+    .background-container {
+      height: -webkit-fill-available;
+    }
+  }
 }
