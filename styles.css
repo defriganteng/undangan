@@ -20,6 +20,8 @@ body {
     background: url('background1.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     z-index: -1;
+    transform: translateZ(0); /* Memicu hardware acceleration */
+    -webkit-backface-visibility: hidden; /* Mencegah flicker di beberapa browser */
 }
 
 /* Struktur Sampul Undangan */
