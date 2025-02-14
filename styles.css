@@ -5,11 +5,21 @@ body {
     font-family: 'Playfair Display', serif;
     margin: 0;
     padding: 0;
-    background: url('background1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
     text-align: center;
     overflow: hidden;
     color: #fff;
+}
+
+/* Background Container */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    z-index: -1;
 }
 
 /* Struktur Sampul Undangan */
@@ -28,6 +38,8 @@ body {
 
 /* Isi Undangan */
 .content {
+    position: relative;
+    z-index: 1;
     padding: 60px 20px;
     min-height: 100vh;
     display: flex;
@@ -223,8 +235,6 @@ body {
 html {
     scroll-behavior: smooth;
 }
-
-
 
 /* Styling untuk halaman kedua */
 .second-page {
