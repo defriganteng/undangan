@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Musik Latar -->
+    <audio id="bgMusic" src="lagu-pernikahan.mp3"></audio>
+
+    <!-- Sampul Undangan -->
+    <div class="cover">
+        <h2 class="wedding-title">The Wedding of</h2>
+        <h1 class="couple-names">Pria & Wanita</h1>
+        <div class="guest-title">
+            <p class="kepada-yth">Kepada Yth</p>
+            <p id="guest-name">Nama Tamu</p>
+        </div>
+        <button id="openInvitation">Buka Undangan</button>
+    </div>
+
+    <!-- Isi Undangan Halaman Pertama -->
+    <div class="content" id="content">
+        <h2 class="wedding-title">The Wedding of</h2>
+        <h1 class="couple-names">Pria & Wanita</h1>
+        <p class="wedding-date">25 . 05 . 2025</p>
+        
+        <!-- Indikator Scroll (Hanya muncul di halaman pertama) -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>&#x2191;</span>
+        </div>
+    </div>
+
+    <!-- Isi Undangan Halaman Kedua -->
+    <div class="content second-page" id="secondContent">
+        <div class="couple-info">
+            <div class="groom">
+                <h3>Pria</h3>
+                <p>Putra dari<br>Bapak ... & Ibu ...</p>
+            </div>
+            <div class="wedding-symbol">&</div>
+            <div class="bride">
+                <h3>Wanita</h3>
+                <p>Putri dari<br>Bapak ... & Ibu ...</p>
+            </div>
+        </div>
+        
+        <!-- Detail Acara -->
+        <div class="wedding-details">
+            <div class="ceremony-details">
+                <h4>Akad Nikah</h4>
+                <p class="date">Minggu, 25 Mei 2025</p>
+                <p class="time">Pukul 08.00 WIB</p>
+                <p class="location">Gedung Pernikahan<br>Jalan Contoh No. 123<br>Kota, Provinsi</p>
+            </div>
+            
+            <div class="reception-details">
+                <h4>Resepsi</h4>
+                <p class="date">Minggu, 25 Mei 2025</p>
+                <p class="time">Pukul 11.00 - 13.00 WIB</p>
+                <p class="location">Gedung Pernikahan<br>Jalan Contoh No. 123<br>Kota, Provinsi</p>
+            </div>
+        </div>
+        
+        <!-- RSVP Section -->
+        <div class="rsvp-section">
+            <h4>Konfirmasi Kehadiran</h4>
+            <div class="button-group">
+                <button class="rsvp-button" onclick="confirmAttendance('hadir')">Hadir</button>
+                <button class="rsvp-button" onclick="confirmAttendance('tidak-hadir')">Tidak Hadir</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="invitation-footer">
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua mempelai</p>
+        <div class="footer-decoration">❋</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
