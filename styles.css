@@ -8,6 +8,7 @@ body {
     text-align: center;
     overflow: hidden;
     color: #fff;
+    height: -webkit-fill-available;
 }
 
 /* Background Container */
@@ -234,6 +235,7 @@ body {
 /* Efek Smooth Scroll */
 html {
     scroll-behavior: smooth;
+    height: -webkit-fill-available;
 }
 
 /* Styling untuk halaman kedua */
