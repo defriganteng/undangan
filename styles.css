@@ -21,6 +21,11 @@ body {
     background-size: cover;
     /*background-attachment: fixed;*/
     z-index: -1;
+    transform: translateZ(0); /* Force hardware acceleration */
+    -webkit-transform: translateZ(0);
+    will-change: transform; /* Optimize for animations */
+    pointer-events: none; /* Prevent touch events on background */
+    touch-action: none; /* Prevent touch manipulation */
 }
 
 /* Struktur Sampul Undangan */
