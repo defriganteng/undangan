@@ -52,6 +52,7 @@ body {
     opacity: 0;
     visibility: hidden;
     transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+    height: -webkit-fill-available;
 }
 
 /* Saat .show ditambahkan, tampilkan isi undangan */
