@@ -287,7 +287,7 @@ html {
 /* Nonaktifkan parallax effect di mobile */
 @media (hover: none) and (pointer: coarse) {
   .background-container {
-    background-attachment: scroll !important;
+    background-attachment: fixed;
     position: absolute;
     height: auto;
     min-height: 100%;
