@@ -288,3 +288,10 @@ html {
     font-size: 1.1em;
     line-height: 1.6;
 }
+
+.main-content-wrapper {
+    position: relative;
+    z-index: 1;
+    /* Optional: tambahkan jika ingin scroll lebih smooth di iOS */
+    -webkit-overflow-scrolling: touch;
+}
