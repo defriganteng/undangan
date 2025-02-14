@@ -98,3 +98,31 @@ function confirmAttendance(status) {
         'Terima kasih atas informasinya, kami mohon maaf Anda tidak dapat hadir.';
     alert(message);
 }
+
+
+
+// Di script.js - Tambahkan kode berikut
+
+// Fungsi untuk mengupdate tinggi viewport
+function updateViewportHeight() {
+  const vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Event listener untuk resize dan orientation change
+window.addEventListener('resize', updateViewportHeight);
+window.addEventListener('orientationchange', updateViewportHeight);
+
+// Panggil fungsi pertama kali
+updateViewportHeight();
+
+// Update struktur background container
+document.addEventListener('DOMContentLoaded', function() {
+  const backgroundContainer = document.querySelector('.background-container');
+  const mainContent = document.querySelector('.main-content-wrapper');
+  
+  if(backgroundContainer && mainContent) {
+    mainContent.style.position = 'relative';
+    backgroundContainer.style.height = mainContent.offsetHeight + 'px';
+  }
+});
