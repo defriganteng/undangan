@@ -25,6 +25,7 @@
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
     position: relative;
     text-align: center;
+    z-index: 1;
 }
 
 /* Isi Undangan */
