@@ -101,15 +101,13 @@ function confirmAttendance(status) {
 
 
 
-function adjustBackgroundPosition() {
+function fixBackgroundPosition() {
     const bg = document.querySelector('.background-container');
-    bg.style.height = `${window.innerHeight}px`; // Sesuaikan tinggi dengan viewport sebenarnya
-    bg.style.top = `${window.scrollY}px`; // Pastikan background tetap pada posisinya
+    const scrollOffset = window.scrollY;
+
+    // Gunakan transform agar background tidak ikut terscroll
+    bg.style.transform = `translateY(${scrollOffset}px)`;
 }
 
-// Atur posisi awal
-adjustBackgroundPosition();
-
-// Update posisi saat scroll dan resize
-window.addEventListener('scroll', adjustBackgroundPosition);
-window.addEventListener('resize', adjustBackgroundPosition);
+// Pastikan fungsi dijalankan saat scroll terjadi
+window.addEventListener('scroll', fixBackgroundPosition);
