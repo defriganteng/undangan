@@ -98,3 +98,15 @@ function confirmAttendance(status) {
         'Terima kasih atas informasinya, kami mohon maaf Anda tidak dapat hadir.';
     alert(message);
 }
+
+
+
+function adjustBackgroundHeight() {
+    document.querySelector('.background-container').style.height = `${window.innerHeight}px`;
+}
+
+// Set tinggi awal saat halaman dimuat
+adjustBackgroundHeight();
+
+// Update tinggi saat ukuran layar berubah
+window.addEventListener('resize', adjustBackgroundHeight);
